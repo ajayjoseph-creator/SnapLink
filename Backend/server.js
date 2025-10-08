@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin:"https://snap-link-sandy.vercel.app/",
+    origin:"https://snap-link-sandy.vercel.app/" || "http://localhost:5173/",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );
