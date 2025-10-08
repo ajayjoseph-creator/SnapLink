@@ -14,7 +14,7 @@ const UrlShortener = () => {
     setClicks(0); 
 
     try {
-      const res = await axios.post("http://localhost:3003/api/shorten", { longUrl });
+      const res = await axios.post("https://snaplink-xp0q.onrender.com/api/shorten", { longUrl });
       setShortUrl(res.data.shortUrl);
       setLongUrl("");
     } catch (err) {
@@ -26,7 +26,7 @@ const UrlShortener = () => {
   const handleClick = async (shortUrl) => {
     const shortCode = shortUrl.split("/").pop();
     try {
-      const res = await axios.get(`http://localhost:3003/api/clicks/${shortCode}`);
+      const res = await axios.get(`https://snaplink-xp0q.onrender.com/api/clicks/${shortCode}`);
       setClicks(res.data.clicks);
     } catch (err) {
       console.error(err);

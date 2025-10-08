@@ -8,7 +8,12 @@ dotenv.config();
 connectDB(); 
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin:"https://snap-link-sandy.vercel.app/",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  })
+);
 app.use(express.json());
 
 app.use('/api', urlRoutes);
