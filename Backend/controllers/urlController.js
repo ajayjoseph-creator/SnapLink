@@ -1,7 +1,7 @@
 import Url from "../models/Url.js";
 import { nanoid } from "nanoid";
 
-const BASE_URL = process.env.BASE_URL || "https://snap-link-sandy.vercel.app/";
+const BASE_URL ="https://snaplink-xp0q.onrender.com";
 
 
 export const shortenUrl = async (req, res) => {
